@@ -1,0 +1,113 @@
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 1
+
+Enter a number: 50
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 2
+
+Enter a number: 30
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 2
+
+Enter a number: 10
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 2
+
+Enter a number: 70
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 2
+
+Enter a number: 40
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 2
+
+Enter a number: 60
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 4
+
+........................
+50->30->10->40->70->60->
+........................
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 3
+
+Enter a number: 10
+
+FOUND!
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 5
+
+Enter a number to be deleted:40
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 4
+
+........................
+50->30->10->70->60->
+........................
+
+1)Create Root Node 
+2)Insert Node
+3)Search
+4)preorederTraversal 
+5)Delete
+6)Quit
+Choose an option: 6 
