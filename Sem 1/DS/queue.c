@@ -34,7 +34,7 @@ int main()
 void insert()
 {
 	int x;
-	if((front==0&&rear==n-1)||front==rear+1)
+	if(rear==n-1)
 	{
 		printf("Queue is full\n");
 	}
@@ -44,10 +44,8 @@ void insert()
 		scanf("%d",&x);
 		if(front==-1&&rear==-1)
 			front=rear=0;
-		else if(rear==n-1&&front!=0)
-			rear=0;
 		else
-			rear=(rear+1)%n;
+			rear=rear+1;
 		a[rear]=x;
 	}
 }
@@ -55,53 +53,36 @@ void display()
 {
 	int i;
 	printf("Front=%d\nRear=%d\n",front,rear);
-	if(front==-1)
+	if(rear==-1)
 		printf("\nQueue is empty");
-	else if(front<=rear)
-	{
+	else
 		printf("Queue is:\n");
 		for(i=front;i<=rear;i++)
 			printf("%d\t",a[i]);
-	}
-	else
-	{
-		printf("Queue is:\n");
-		for(i=front;i<n;i++)
-			printf("%d\t",a[i]);
-		for(i=0;i<=rear;i++)
-			printf("%d\t",a[i]);
-	}
 }
 void del()
 {
-	if(front==-1)
+	if(rear==-1)
 		printf("\nQueue is Empty\n");
 	else
 	{
 		printf("Deleted element is %d",a[front]);
-		if(front==rear)
-			front=rear=-1;
-		else
-		{
-			if(front==n-1)
-				front=0;
-			else
-				front+=1;
-		}
+		front=front+1;
 	}
 }
 void search(){
 	int x,i,j;
+	int f1=0;
 	printf("Enter the element to search:\n");
 	scanf("%d",&x);
-	if(front<=rear)
-	{
-		int f1=0;
-		for(i=front;i<=rear;i++)
+	if(rear==-1)
+		printf("\nQueue is empty");
+	else{
+		for(i=front,j=1;i<=rear;i++,j++)
 		{
 			if(a[i]==x)
 			{
-				printf("Element found at position %d",i);
+				printf("Element found at position %d",j);
 				f1=1;
 				break;
 			}
@@ -109,34 +90,4 @@ void search(){
 		if(f1==0)
 			printf("Element not found\n");
 	}
-	else
-	{
-		int f=0;
-		for(i=front,j=1;i<n;i++,j++)
-		{
-			if(a[i]==x)
-			{
-				f=1;
-				printf("Element found at position %d",j);
-				break;
-			}
-		}
-		if(f==0)
-		{
-			int f2=0;
-			for(i=0;i<=rear;i++)
-			{
-				if(a[i]==x)
-				{
-					printf("Element found at position %d",i+n-1);
-					f2=1;
-					break;
-				}
-			}
-			if(f2==0)
-				printf("Element not found");
-		}
-	}
 }
-  
-    
