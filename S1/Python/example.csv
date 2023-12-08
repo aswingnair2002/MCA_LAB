@@ -1,4 +1,2 @@
-Name,Age,City
-John Doe,25,New York
-Jane Smith,30,San Francisco
-Bob Johnson,22,Los Angeles
+Age,Name,City
+25,John Doe,New York

@@ -1,0 +1,23 @@
+Enter size of array a:
+5 
+Enter array elements:
+45
+32
+14
+78
+24
+Enter size of array b:
+5
+Enter array elements:
+35
+79
+31
+90
+11
+
+Array a:
+14	24	32	45	78	
+Array b:
+11	31	35	79	90	
+Array c:
+11	14	24	31	32	35	45	78	79	90	
