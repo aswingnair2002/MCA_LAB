@@ -92,40 +92,41 @@ void main() {
 		scanf("%d",&c);
 		switch(c) {
 			case 1:
-			printf("Enter element : ");
-			scanf("%d",&x);
-			if(search(x)==1)
-				printf("\nElement already present");
-			else
-				makeset(x);
-			break;
+				printf("Enter element : ");
+				scanf("%d",&x);
+				if(search(x)==1)
+					printf("\nElement already present");
+				else
+					makeset(x);
+				break;
 			case 2:
-			printf("The sets are\n");
-			for(i=0;i<countroot;i++)
-				printf("%d ",heads[i]->data);
-			break;
+				printf("The sets are\n");
+				for(i=0;i<countroot;i++)
+					printf("%d ",heads[i]->data);
+				break;
 			case 3:
-			printf("enter the two  sets to union\n");
-			printf("Enter first set : ");
-			scanf("%d",&x);
-			printf("Enter second set : ");
-			scanf("%d",&y);
-			unionsets(x,y);
-			break;
+				printf("enter the two  sets to union\n");
+				printf("Enter first set : ");
+				scanf("%d",&x);
+				printf("Enter second set : ");
+				scanf("%d",&y);
+				unionsets(x,y);
+				break;
 			case 4:
-			printf("Enter the value to find : ");
-			scanf("%d",&x);
-			rep=find(x);
-			if(rep==NULL)
-				printf("\nNot present");
-			else
-				printf("\nValue %d is  in set %d",x,rep->data);
-			break;
+				printf("Enter the value to find : ");
+				scanf("%d",&x);
+				rep=find(x);
+				if(rep==NULL)
+					printf("\nNot present");
+				else
+					printf("\nValue %d is  in set %d",x,rep->data);
+				break;
 			case 5:
-			printf("\nPress any key to exit...");
-			exit(0);
-			break;
-			default:printf("Invalid choice");
+				printf("\nPress any key to exit...");
+				exit(0);
+				break;
+			default:
+				printf("Invalid choice");
 		}
 	}
 }

@@ -40,8 +40,6 @@ struct node* insert(struct node* root,int value){
 
 }
 
-//Preorder traversal
-
 void preorderTraversal(struct node *root){
 
 	if(root==NULL) return;
@@ -73,8 +71,6 @@ struct node *search(struct node *root, int key){
 struct node* minValueNode(struct node* node){
 
 	struct node* current=node;
-	
-	/*loop down to find the leftmost leaf */
 
 	while(current && current->left !=NULL){
 
@@ -95,8 +91,6 @@ struct node* deleteNode(struct node* root, int key){
 		root->right = deleteNode(root->right,key);
 	}else{
 
-		//node with only one child or no child
-
 		if(root->left==NULL){
 
 			struct node* temp = root->right;
@@ -108,18 +102,10 @@ struct node* deleteNode(struct node* root, int key){
 			free(root);
 			return temp;
 		}
-
-		//node with two chlidren
-		//Get the inorder successor
-		//(smallest in the right subtree)
 		
 		struct node* temp= minValueNode(root->right);
 	
-		//Copy the  inorder 
-		//successor's content to this node
 		root->data=temp->data;
-
-		//Delete the inorder successor
 
 		root->right = deleteNode(root->right, temp->data);
 	}

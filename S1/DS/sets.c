@@ -55,7 +55,7 @@ void main(){
 	int i,p,x;
 	printf("Enter size of universal set : ");
 	scanf("%d",&n);
-	printf("Enter elements : ");
+	printf("Enter elements : \n");
 	for(i=0;i<n;i++){
 		scanf("%d",&u[i]);
 		a[i]=b[i]=0;
@@ -63,7 +63,7 @@ void main(){
 	}
 	printf("\nEnter size of set 1: ");
 	scanf("%d",&p);
-	printf("\nEnter elements: ");
+	printf("\nEnter elements: \n");
 	for(i=0;i<p;i++){
 		scanf("%d",&x);
 		if(pos(x)!=-1)
@@ -71,7 +71,7 @@ void main(){
 	}
 	printf("\nEnter size of set 2: ");
 	scanf("%d",&p);
-	printf("\nEnter elements: ");
+	printf("\nEnter elements: \n");
 	for(i=0;i<p;i++){
 		scanf("%d",&x);
 		if(pos(x)!=-1)

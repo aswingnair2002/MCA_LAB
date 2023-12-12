@@ -1,0 +1,73 @@
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 1
+Enter element : 45
+
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 1
+Enter element : 22
+
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 1
+Enter element : 76
+
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 2
+The sets are
+45 22 76 
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 3
+enter the two  sets to union
+Enter first set : 45
+Enter second set : 22
+
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 2
+The sets are
+45 76 
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 4
+Enter the value to find : 22
+
+Value 22 is  in set 45
+
+1:Make Set
+2:Display set Representatives
+3:Union
+4:Find Set
+5:Exit
+Enter your choice : 
+
