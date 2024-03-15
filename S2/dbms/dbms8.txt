@@ -242,3 +242,12 @@ mysql> select s.sname from Sailors s where not exists in ((select b.bid from Boa
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in ((select b.bid from Boats b)except in (select r.bid from Reserves r where r.s' at line 1
 mysql> select s.sname from Sailors s where not exists((select b.bid from Boats b)except(select r.bid from Reserves r where r.sid=s.sid));
 
+
+mysql> select s.sname from Sailors s where not exists (select b.bid from Boats b where not exists (select r.bid from Reserves r where r.sid=s.sid and r.bid=b.bid));
++--------+
+| sname  |
++--------+
+| Dustin |
++--------+
+1 row in set (0.05 sec)
+
