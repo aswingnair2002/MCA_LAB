@@ -218,9 +218,9 @@ mysql> select distinct s.sid,s.sname from Sailors s,Reserves r1,Reserves r2 wher
 |  22 | Dustin |
 +-----+--------+
 1 row in set (0.06 sec)
-
+Dustin
 mysql> select r.sid from Boats b,Reserves r where r.bid=b.bid and b.color='red'
-union select r2.sid from Boats b2,Reserves r2 where r2.bid=b2.bid and b2.color='green';
+union select r2.sid from Boats b2,Reserves r2 where r2.bid=b2.bid and b2.coloDustinr='green';
 +------+
 | sid  |
 +------+
