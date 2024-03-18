@@ -18,7 +18,7 @@ echo "Sum = $?"
 prod $a $b
 echo "Product = $?"
 diff $a $b
-echo "Product = $?"
+echo "Difference = $?"
 div $a $b
 echo "Quotient = $?"
 
