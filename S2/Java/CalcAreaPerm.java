@@ -25,18 +25,18 @@ class Circle implements Calc{
     }
     @Override
     public float area(){
-        return 3.14*radius*radius;
+        return (float)(3.14*radius*radius);
     }
     @Override
     public float perimeter(){
-        return 2*3.14*radius;
+        return (float)(2*3.14*radius);
     }
 }
 class CalcAreaPerm{
     public static void main(String args[]){
         Scanner scn = new Scanner(System.in);
         while(true){
-            System.out.println("1.Rectangle\n2.Circle\n3.Exit");
+            System.out.println("\n1.Rectangle\n2.Circle\n3.Exit");
             System.out.print("Enter Your Choice : ");
             int ch = scn.nextInt();
             switch(ch){
