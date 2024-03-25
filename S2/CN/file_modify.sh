@@ -1,19 +1,22 @@
 #!/bin/bash
 copy(){
-	read -p "Enter the path to copy" c
-		cp $1 $c
+	read -p "Enter the File Name : " filename
+	read -p "Enter the path to copy : " c
+	cp $filename $c
 }
 edit(){
-	gedit $1
+	read -p "Enter the File Name : " filename
+	gedit $filename
 }
 rename(){
-	read -p "Enter new name" new
-	mv $1 $new
+	read -p "Enter the File Name : " filename
+	read -p "Enter new name : " new
+	mv $filename $new
 }
 delete(){
-	rm $1
+	read -p "Enter the File Name : " filename
+	rm $filename
 }
-read -p "Enter the File Name : " filename
 while [ true ]
 do
 	echo "1.Copy"
@@ -23,13 +26,13 @@ do
 	echo "5.Exit"
 	read -p "Enter your choice : " ch
 	case $ch in
-		1) copy $filename
+		1) copy
 		;;
-		2) edit $filename
+		2) edit
 		;;
-		3) rename $filename
+		3) rename
 		;;
-		4) delete $filename
+		4) delete
 		;;
 		5) exit
 		;;
