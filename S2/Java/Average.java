@@ -6,7 +6,7 @@ class NegativeException extends Exception{
 }
 class Average{
     public static void main(String[] args) {
-        int i,sum=0;
+        int i,sum=0,n=0;
         float avg;
         Scanner scn = new Scanner(System.in);
         int arr[] = new int[10];
@@ -18,9 +18,7 @@ class Average{
         }
         try{
             for(i=0;i<s;i++){
-                if(arr[i]>=0){
-                    sum = sum+arr[i];
-                }else{
+                if(arr[i]<0){
                     throw new NegativeException("Negative Exeption : "+arr[i]);
                 }
             }
@@ -28,6 +26,14 @@ class Average{
         System.out.println("Average is : "+avg);
         }catch(NegativeException e){
             System.out.println(e.getMessage());
+        }finally{
+            for(i=0;i<s;i++){
+                if(arr[i]>=0){
+                    sum = sum+arr[i];
+                    n = n+1;
+                }
+            }
+            System.out.println("Average : "+(sum/n));
         }
     }
 }
