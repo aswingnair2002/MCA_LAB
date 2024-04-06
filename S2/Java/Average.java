@@ -16,24 +16,22 @@ class Average{
         for(i=0;i<s;i++){
             arr[i] = scn.nextInt();
         }
-        try{
-            for(i=0;i<s;i++){
+        for(i=0;i<s;i++){
+            try{
                 if(arr[i]<0){
                     throw new NegativeException("Negative Exeption : "+arr[i]);
                 }
+            }catch(NegativeException e){
+                System.out.println(e.getMessage());
             }
-        avg = sum/s;
-        System.out.println("Average is : "+avg);
-        }catch(NegativeException e){
-            System.out.println(e.getMessage());
-        }finally{
-            for(i=0;i<s;i++){
-                if(arr[i]>=0){
-                    sum = sum+arr[i];
-                    n = n+1;
-                }
-            }
-            System.out.println("Average : "+(sum/n));
         }
+        for(i=0;i<s;i++){
+            if(arr[i]>=0){
+                sum = sum+arr[i];
+                n = n+1;
+            }
+        }
+        avg = sum/n;
+        System.out.println("Average is : "+avg);
     }
 }
