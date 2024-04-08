@@ -1,5 +1,5 @@
-echo "Enter a 7 digit number"
-read num
+#!/bin/bash
+echo -p "Enter a 7 digit number : " num
 n=1
 while [ $n -le 7 ]
 do
