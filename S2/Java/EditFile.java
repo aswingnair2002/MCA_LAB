@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
-import java.io.BufferedReader;
-class SearchFile{
+import java.io.*;
+class EditFile{
     static void read(String filename){
         File file = new File(filename);
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){

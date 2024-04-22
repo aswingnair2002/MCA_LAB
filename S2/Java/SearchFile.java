@@ -35,7 +35,7 @@ class SearchFile{
     }
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
-        String path = "/home/lab2/Desktop/Akash/S2/Java/sample";
+        String path = "sample/";
         listFilesAndDir(path);
         System.out.print("Enter the file to search : ");
         String searchfile = scn.next();
