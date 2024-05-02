@@ -1,18 +1,17 @@
-
 import java.util.Scanner;
 import java.io.*;
 class CopyFile {
-    static void copy(String input,String output) throws FileNotFoundException{
-        FileInputStream in = new FileInputStream(input); 
-        FileOutputStream out = new FileOutputStream(output); 
-        int n;
-        try {
-            while ((n = in.read()) != -1) { 
-                out.write(n); 
+    static void copy(String input,String output){
+        try (BufferedReader in = new BufferedReader(new FileReader(input));
+             BufferedWriter out = new BufferedWriter(new FileWriter(output))){
+            String line;
+            while ((line = in.readLine()) != null) {
+                out.write(line);
+                out.newLine();
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } 
+        }
     }
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -20,11 +19,6 @@ class CopyFile {
         String in = scn.next();
         System.out.print("Enter the Destination  File : ");
         String out = scn.next();
-        try {
-            copy(in,out);
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        copy(in,out);
     }
 }
